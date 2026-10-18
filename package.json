@@ -1,0 +1,29 @@
+{
+  "name": "read-post-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that lets agents read public social media posts through each site's public embed data. No logins.",
+  "type": "module",
+  "bin": {
+    "read-post-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "!dist/check.js"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "check": "npm run build && node dist/check.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}
